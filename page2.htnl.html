@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Это я создал !!!</title>
+</head>
+
+<body>
+
+
+
+<a href="http://www.youtube.com/watch?v=bebuiaSKtU4" 
+title=" Да,включай."><strong>Для начала поставь музыку!</strong></a>
+
+<h1>Сейдиснилю!</h1>
+<script>
+
+
+
+
+var words=[
+  "нуссус",
+  "якубович",
+  "тушканчик",
+  "новопеределкино",
+  "чиканок",
+  "оладушек"
+]
+
+let quest=[
+  "НННУУС!",
+  "Ведущий программы.",
+  "Бегает в пустыне.",
+  "Район москвы.",
+  "Лошадь в майне.",
+  "Пекут на сковороде типа блинов.",
+  "Подрыватель в майнкрафте."]
+
+var word= words[Math.floor(Math.random()*words.length)];
+
+
+var answer=[]
+for(let i=0;i<word.length;i++){
+  answer[i]="_"
+}
+var ostavshiesya=word.length
+
+// +quest[Math.floor(Math.random()*quest.length)]
+
+//игровой цикл
+while(ostavshiesya>0){
+	alert(answer.join(" "));
+
+var guess=prompt("Угадай букву или нажми Отмена для выхода из игры. ")
+if(guess === null){
+  break;
+}
+else if(guess.length!==1){
+  alert("Не разгоняйся гонщик. Введи только одну букву!")
+}
+else{
+	// Обновение сведений 
+  for(var j=0; j<word.length; j++){
+    if(word[j]===guess){
+      answer[j]=guess;
+      ostavshiesya--;
+    }
+  }
+}
+//end circle
+}
+alert(answer.join(" "));
+alert("Отлично! Было загадано слово " + word+".")
+
+</script>
+</body>
+</html>

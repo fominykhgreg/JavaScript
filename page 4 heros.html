@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Лучшие герои Dota 2</title>
+</head>
+<body>
+ <h1 id="main-heading">Best heroes !!!</h1>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+let heros=[
+"Rubick",
+"Silencer",
+"Barathrum",
+"Ancient Aparition",
+"Mars",
+"Lion"
+];
+ 
+ for(let i=0;i<heros.length;i++){
+ $("body").append("<p>"+heros[i]+"</p>")
+}
+
+let fun=function(){
+for(let j=0;j<1;j++){
+$("p").fadeOut(3000).fadeIn(3000)
+
+
+ 
+ $("h1").slideUp(500).slideDown(500);
+ }
+}
+
+let intervalId=setInterval(fun,5000)
+ </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Опросник</title>
+</head>
+<body>
+ <h1 id="main-heading">Привет, мир!</h1>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+ <script>
+ var newHeadingText = prompt("Введите новый заголовок:");
+ $("#main-heading").text(newHeadingText);
+
+
+ $("body").append("<p>Это твои любимые персонажи в игре:</p>");
+
+ for(var i=0;i<3;i++){
+ 	var pers=prompt("Назови лучшего персонажа в доте!");
+ 	$("body").append("<p>"+pers+"</p>");
+ 	for(var j=0;j<9999;j++){
+ 	$("h1").slideUp(1000).slideDown(1000);
+ 	for(let g=0;g<3;g++){
+ 	$("h1").fadeOut(2000).fadeIn(2000);
+ }
+ }
+ }
+
+ </script>
+</body>
+</html>

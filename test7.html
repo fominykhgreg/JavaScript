@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Перемещение мышки</title>
+</head>
+<body>
+ <h1 id="heading">>_<</h1>
+ <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+ <script>
+
+
+
+	
+
+// //влево
+	var leftOffset = 0;
+var downOffset = 0;
+var rightOffset = 800;
+var upOffset = 800;
+
+ var moveHeading = function (){
+
+
+ $("#heading").offset({left:leftOffset});
+ leftOffset++;
+ if (leftOffset > 800) {
+$("#heading").offset({top:downOffset,left:800});
+ downOffset++;
+ if (downOffset > 800) {
+$("#heading").offset({top:800,left:rightOffset});
+ rightOffset--;
+ if (rightOffset <0) {
+$("#heading").offset({top:upOffset,left:0});
+ upOffset--;
+ if (upOffset <0) {
+upOffset = 800;
+leftOffset = 0;
+downOffset = 0;
+rightOffset = 800;
+
+ }
+ }
+ }
+ }
+
+} 
+
+
+var xx=setInterval(moveHeading,1)
+for(let i=0;i<999;i++){
+$("h1").fadeOut(3000).fadeIn(1500)
+}
+
+var clickHandler = function (event) {
+
+	clearInterval(xx)
+};
+
+ $("html").click(clickHandler);
+
+// var clickHandler2 = function (event) {
+// 	setInterval(moveHeading,1)
+// };
+//  $("html").click(clickHandler2);
+
+ </script>
+</body>
+</html>
